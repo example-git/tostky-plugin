@@ -1,4 +1,4 @@
-package com.example;
+package com.tostky;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
