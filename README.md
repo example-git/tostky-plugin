@@ -1,2 +1,2 @@
-# Example
-An example greeter plugin
+# Tostky Tracker
+Tostky Tracker is a plugin that adds an overlay that keeps track of all the ammo in your inventory and a panel that tracks total usage of ammo. Including cannonballs over time with the ability to reset the counter on demand.
