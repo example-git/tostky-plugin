@@ -503,12 +503,12 @@ public class TostkyPlugin extends Plugin {
 
 	private boolean isArrow(int itemId) {
 		// Example: Replace with actual range or IDs
-		return itemId == ItemID.BRONZE_ARROW || itemId == ItemID.IRON_ARROW || itemId == ItemID.STEEL_ARROW || itemId == ItemID.MITHRIL_ARROW || itemId == ItemID.ADAMANT_ARROW || itemId == ItemID.RUNE_ARROW || itemId == ItemID.AMETHYST_ARROW || itemId == ItemID.DRAGON_ARROW;
+		return itemId == ItemID.BRONZE_ARROW || itemId == ItemID.IRON_ARROW || itemId == ItemID.STEEL_ARROW || itemId == ItemID.MITHRIL_ARROW || itemId == ItemID.ADAMANT_ARROW || itemId == ItemID.RUNE_ARROW || itemId == ItemID.AMETHYST_ARROW || itemId == ItemID.DRAGON_ARROW || itemId == ItemID.BROAD_ARROWS;
 	}
 
 	private boolean isBolt(int itemId) {
 		// Example: Replace with actual range or IDs
-		return itemId == ItemID.BRONZE_BOLTS || itemId == ItemID.IRON_BOLTS || itemId == ItemID.STEEL_BOLTS || itemId == ItemID.MITHRIL_BOLTS || itemId == ItemID.ADAMANT_BOLTS || itemId == ItemID.RUNITE_BOLTS || itemId == ItemID.RUNITE_BOLTS_P || itemId == ItemID.DRAGON_BOLTS || itemId == ItemID.AMETHYST_BROAD_BOLTS || itemId == ItemID.RUBY_BOLTS_E || itemId == ItemID.EMERALD_BOLTS_E || itemId == ItemID.DIAMOND_BOLTS_E || itemId == ItemID.ONYX_BOLTS_E;
+		return itemId == ItemID.BRONZE_BOLTS || itemId == ItemID.IRON_BOLTS || itemId == ItemID.STEEL_BOLTS || itemId == ItemID.MITHRIL_BOLTS || itemId == ItemID.ADAMANT_BOLTS || itemId == ItemID.RUNITE_BOLTS || itemId == ItemID.RUNITE_BOLTS_P || itemId == ItemID.DRAGON_BOLTS || itemId == ItemID.AMETHYST_BROAD_BOLTS || itemId == ItemID.RUBY_BOLTS_E || itemId == ItemID.EMERALD_BOLTS_E || itemId == ItemID.DIAMOND_BOLTS_E || itemId == ItemID.ONYX_BOLTS_E || itemId == ItemID.BROAD_BOLTS;
 	}
 
 	private boolean isDart(int itemId) {
