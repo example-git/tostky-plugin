@@ -87,8 +87,12 @@ public class TostkyPlugin extends Plugin {
 	protected void startUp() throws Exception {
 		//previousCannonballCount = client.getVar(VarPlayer.CANNON_AMMO);
 		// Initialize previousCounts
-		updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.INVENTORY), previousCounts);
-		updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.EQUIPMENT), previousCounts);
+		clientThread.invoke(() -> {
+			updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.INVENTORY), previousCounts);
+		});
+		clientThread.invoke(() -> {
+			updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.EQUIPMENT), previousCounts);
+		});
 		panel = injector.getInstance(TostkyPanel.class);
 		overlayManager.add(overlay);
 		cannonBallCount = config.cannonBallCount();
@@ -381,9 +385,12 @@ public class TostkyPlugin extends Plugin {
 		// inventory state if you want to immediately start tracking after a reset.
 		// Otherwise, previousCounts will naturally repopulate on the next
 		// onItemContainerChanged event.
-		updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.INVENTORY), previousCounts);
-		updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.EQUIPMENT), previousCounts);
-
+		clientThread.invoke(() -> {
+			updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.INVENTORY), previousCounts);
+		});
+		clientThread.invoke(() -> {
+			updateAmmunitionCountsFromContainer(client.getItemContainer(InventoryID.EQUIPMENT), previousCounts);
+		});
 		overlay.update();
 		panel.updateCounts();
 	}
